@@ -20,3 +20,26 @@ p.apply-notes {font-size: 1.2em;}
   margin: 0 0 0 60px;
   padding: 0 0 0.5em 0;
 }
+span.available {
+  display: inline-block;
+  background-color: #bac405;
+  color: white;
+  text-indent: .5em;
+}
+span.available0 {background-color: transparent; color: #000;}
+span.available1 {width: 25%;}
+span.available2 {width: 50%;}
+span.available3 {width: 75%;}
+span.available4 {width: 100%;}
+
+p.experience {
+  margin-left: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #c8DAE7;
+  color: #666;
+  text-align: center;
+  line-height: 50px;
+  font-size: 2em;
+}

@@ -4,7 +4,7 @@ This is my attempt at doing the Snagajob assignment, effectively applying for my
 
 ## Assignment Description
 
-The assignment can be found [here](https://docs.google.com/document/d/1Z6CDpLgkDlyDQky0zaKMd6Z73BnkohVz5wm9wzhYaFM/edit) as long as you are on a Snagajob network. In summary:
+The assignment can be found [here](https://docs.google.com/document/d/1Z6CDpLgkDlyDQky0zaKMd6Z73BnkohVz5wm9wzhYaFM/) as long as you are on a Snagajob network. In summary:
 
 > Managers want to be able to browse, sort, and filter job applications they receive on a web dashboard that they can use across a variety of devices. They should be able to inspect an individual application to see more details as well as flag applications to look at later or revisit. When the manager comes back to the application, this list should still be available to them.
 
