@@ -1,3 +1,26 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <a class="navbar-brand" href="/">{{title}}</a>
+</nav>
+
+<input type="text" class="form-control filter" placeholder="Filter Results" #filter (keyup)="0" value="" />
+
+<div class="text-right container">
+  <label>Order By:</label>
+  <select [(ngModel)]="orderBy">
+      <option value="date">Most Recent</option>
+      <option value="position">Position</option>
+      <option value="name">Name</option>
+      <option value="shuffle">Shuffle</option>
+  </select>
+</div>
+
+<ol class="applicant-list">
+    <li *ngFor="let jobApp of jobApplications | textFilter: filter.value | sort: orderBy" id="app-{{jobApp.id}}" (click)="onSelect(jobApp)" class="applicant">
+        <div class="row" *ngIf="selectedApp !== jobApp.id">
+            <app-applicant-summary [thisApp]="jobApp"></app-applicant-summary>
+        </div>
+        <div class="row" *ngIf="selectedApp === jobApp.id">
+            <app-applicant-detail [thisApp]="jobApp"></app-applicant-detail>
+        </div>
+    </li>
+</ol>

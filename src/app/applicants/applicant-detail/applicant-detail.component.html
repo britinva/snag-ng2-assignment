@@ -1,0 +1,43 @@
+<div class="container-fluid">
+<div class="row">
+  <div class="col-xs-10">
+    <h1>{{thisApp.name}}</h1>
+    <p class="apply-notes">Applied for <strong> {{thisApp.position}}</strong><br />on <em>{{thisApp.applied | date:'MM/dd/yyyy'}}</em></p>
+  </div>
+  <div class="col-xs-2">
+    <i class="fa fa-star-o fa-2x star" *ngIf="!thisApp.isFaved" aria-hidden="true" (click)="fave(thisApp)" ></i>
+    <i class="fa fa-star fa-2x star" *ngIf="thisApp.isFaved" aria-hidden="true" (click)="unfave(thisApp)" ></i>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-4 col-sm-3 col-md-2">
+      <h3>Experience</h3>
+      <p>{{thisApp.experience}}</p>
+      <h3>Availability</h3>
+      <dl class="availability">
+          <dt>Mon</dt>
+          <dd>{{thisApp.availability.M}}</dd>
+          <dt>Tue</dt>
+          <dd>{{thisApp.availability.T}}</dd>
+          <dt>Wed</dt>
+          <dd>{{thisApp.availability.W}}</dd>
+          <dt>Thu</dt>
+          <dd>{{thisApp.availability.Th}}</dd>
+          <dt>Fri</dt>
+          <dd>{{thisApp.availability.F}}</dd>
+          <dt>Sat</dt>
+          <dd>{{thisApp.availability.S}}</dd>
+          <dt>Sun</dt>
+          <dd>{{thisApp.availability.Su}}</dd>
+    </dl>
+  </div>
+  <div class="col-xs-7 col-xs-offset-1 col-sm-8 col-sm-offset-0 col-md-10">
+      <h3>Questions</h3>
+      <li *ngFor="let question of thisApp.questions">
+          <h4>{{question.text}}</h4>
+          <p>{{question.answer}}</p>
+      </li>
+  </div>
+</div>
